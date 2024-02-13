@@ -11,7 +11,7 @@ class PosOrder(models.Model):
 
     # Columns Section
     margin = fields.Float(
-        'Margin', compute='_compute_margin', store=True,
+        'Margin', compute='_compute_margin', store=False,
         digits=dp.get_precision('Product Price'),
         help="It gives profitability by calculating the difference between"
         " the Unit Price and the cost price.")
