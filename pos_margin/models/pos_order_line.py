@@ -11,11 +11,11 @@ class PosOrderLine(models.Model):
 
     # Columns Section
     margin = fields.Float(
-        'Margin', compute='_compute_multi_margin', store=True,
+        'Margin', compute='_compute_multi_margin', store=False,
         multi='multi_margin', digits=dp.get_precision('Product Price'))
 
     purchase_price = fields.Float(
-        'Cost Price', compute='_compute_multi_margin', store=True,
+        'Cost Price', compute='_compute_multi_margin', store=False,
         multi='multi_margin', digits=dp.get_precision('Product Price'))
 
     # Compute Section
